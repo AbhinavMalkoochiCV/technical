@@ -1,0 +1,25 @@
+{
+  "name": "minicoder",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "setup": "python3 -m venv .venv && .venv/bin/pip install -r requirements.txt && npm install",
+    "dev": "concurrently -k -n api,web '.venv/bin/python -m uvicorn backend.app:app --reload --port 8000' 'vite'",
+    "build": "tsc --noEmit && vite build",
+    "test": ".venv/bin/python -m pytest -q",
+    "check": ".venv/bin/python -m mypy backend && tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "concurrently": "^9.2.4",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1"
+  }
+}

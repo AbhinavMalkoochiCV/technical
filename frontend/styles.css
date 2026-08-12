@@ -1,0 +1,20 @@
+:root { font-family: Arial, sans-serif; color: #171717; background: #f4f4f4; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+main { display: grid; grid-template-columns: 42% 58%; width: min(960px, 100%); height: 100dvh; margin: auto; background: white; }
+aside, section { display: flex; min-width: 0; flex-direction: column; }
+aside { border-right: 1px solid #ddd; }
+header { height: 52px; padding: 17px; border-bottom: 1px solid #ddd; font-size: 14px; font-weight: 600; }
+nav { display: flex; gap: 6px; padding: 10px; border-bottom: 1px solid #eee; }
+nav button { padding: 6px 9px; border: 0; border-radius: 6px; background: transparent; cursor: pointer; }
+nav button.selected { background: #eee; }
+pre { flex: 1; margin: 0; padding: 16px; overflow: auto; font: 13px/1.5 monospace; white-space: pre-wrap; }
+.messages { flex: 1; padding: 18px; overflow: auto; }
+p { width: fit-content; max-width: 80%; margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; background: #eee; white-space: pre-wrap; }
+p.user { margin-left: auto; color: white; background: #171717; }
+form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #ddd; }
+input { min-width: 0; flex: 1; padding: 11px; border: 1px solid #ccc; border-radius: 8px; }
+form button { padding: 0 15px; border: 0; border-radius: 8px; color: white; background: #171717; }
+button:disabled { opacity: .4; }
+@media (max-width: 650px) { main { grid-template-columns: 1fr; } aside { max-height: 42dvh; border: 0; border-bottom: 1px solid #ddd; } }

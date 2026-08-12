@@ -1,0 +1,2 @@
+TOKEN_EXPIRY_MINUTES = 30
+APP_NAME = "MiniShop"
