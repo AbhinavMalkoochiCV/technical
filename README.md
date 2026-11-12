@@ -18,7 +18,7 @@ npm run build
 
 ## Task
 
-Find and fix the three intentional behavioral bugs. Then add a
+Find and fix the intentional behavioral bugs. Then add a
 `delete_file(path)` tool alongside the existing file tools.
 
 ```python
